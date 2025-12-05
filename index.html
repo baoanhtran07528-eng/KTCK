@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Band</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME FIXED (stable) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- W3.CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+      /* Modal styling */
+      .w3-modal {
+        display: none; 
+        position: fixed;
+        z-index: 1000; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.7); 
+        justify-content: center; /* Center modal */
+        align-items: center; /* Vertical centering */
+      }
+
+      .w3-modal-content {
+        max-width: 500px;
+        width: 90%;
+      }
+    </style>
+</head>
+
+<body class="w3-light-grey">
+
+    <!-- HEADER -->
+    <header>
+    <span class="menu_toggle"><i class="fa fa-bars"></i></span>
+    <div class="navbar_area">
+        <ul class="nav_list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#band">Introduction</a></li>
+            <li><a href="#tour">History</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+            <li class="nav_more">
+                <a href="#">More <i class="fa fa-caret-down"></i></a>
+                <div class="nav_item">
+                    <a href="merchandise.html">Merchandise</a>
+                    <a href="extras.html">Extras</a>
+                    <a href="media.html">Media</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="header_search">
+        <i class="fa fa-search"></i>
+    </div>
+</header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- CAROUSEL -->
+        <section class="carouselTheBand w3-display-container" id="home">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <img src="img/IMG_9775.JPG" class="d-block w-100 w3-image" alt="placeholder 1">
+                        <div class="carousel-caption d-none d-md-block w3-display-middle w3-center w3-text-white">
+                            <h5>The Beginning of Timeless Animation</h5>
+                            <p>Where simple sketches turned into unforgettable characters.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/IMG_9774.JPG" class="d-block w-100 w3-image" alt="placeholder 2">
+                        <div class="carousel-caption d-none d-md-block w3-display-middle w3-center w3-text-white">
+                            <h5>Icons That Never Grow Old</h5>
+                            <p>Relive the humor, charm, and wonder of the early classics.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/Cartoon-Network.webp" class="d-block w-100 w3-image" alt="placeholder 3">
+                        <div class="carousel-caption d-none d-md-block w3-display-middle w3-center w3-text-white">
+                            <h5>A New Age of Creativity</h5>
+                            <p>Bold stories, stunning art styles, limitless imagination.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- THE BAND -->
+        <section class="band spacing w3-container w3-padding-64 w3-center" id="band">
+          <div class="heading">
+            <h1 class="w3-text-black w3-wide">Cartoon Network</h1>
+            <p class="w3-text-grey">Introduction</p>
+          </div>
+
+          <div class="band_content w3-container">
+            <p>
+Cartoon Network is the funny and unexpected brand that stands out from the pack in a way in which kids can relate. Our cartoon-crammed network delivers hilarious comedy, unexpected surprises and edge-of-your-seat action through the best in animated series and hit blockbuster movies. Cartoon Network is where anything is possible, where fun and adventure lives–all day, every day.
+
+            </p>
+
+            <div class="band_member w3-row-padding w3-margin-top">
+              <!-- John -->
+              <figure class="band_item w3-col l3 m6 s12 w3-margin-bottom w3-card w3-hover-shadow">
+                <h5>Adventure Time</h5>
+                <img src="img/adventure_time.webp" alt="Adventure Time" class="w3-image">
+              </figure>
+
+              <!-- Mary -->
+              <figure class="band_item w3-col l3 m6 s12 w3-margin-bottom w3-card w3-hover-shadow">
+                <h5>The Powerpuff Girls</h5>
+                <img src="img/The-Powerpuff-Girls-Bubbles-Blossom-Buttercup.webp" alt="The Powerpuff Girls" class="w3-image">
+              </figure>
+
+              <!-- Steve -->
+              <figure class="band_item w3-col l3 m6 s12 w3-margin-bottom w3-card w3-hover-shadow">
+                <h5>Courage the cowardly dog</h5>
+                <img src="img/af075b9d-691c-413d-b820-c2f0d5cb2f4d_600x399.jpg" alt="courage-the-cowardly-dog" class="w3-image">
+              </figure>
+            </div>
+          </div>
+
+          <!-- ASIDE -->
+          <aside class="w3-container w3-light-grey w3-margin-top w3-padding">
+            <h4>Fun Fact</h4>
+            <p>Cartoon Network was the first channel to broadcast animated programming 24/7!</p>
+          </aside>
+        </section>
+
+        <!-- TOUR DATES -->
+        <section class="tourDates" id="tour">
+          <div class="tour_section w3-container w3-black w3-padding-64">
+            <h2 class="tour_title w3-text-white w3-wide">History</h2>
+            <p class="tour_subtitle w3-text-grey">How Cartoon Network developed</p>
+
+            <div class="tour_cards w3-row-padding w3-margin-top">
+              <!-- New York -->
+              <article class="tour_card w3-col l4 m6 s12 w3-margin-bottom w3-card w3-hover-shadow w3-white">
+                <img src="img/the-20-best-cartoon-network-shows-of-all-time-ran-3-1189-1700232185-2_16x9-7571465.jpg" alt="New York" class="w3-image">
+                <div class="tour_info w3-container">
+                  <h3>The start</h3>
+                  <p class="tour_date w3-text-grey">October 1, 1992</p>
+                  <p>Cartoon Network's beginnings</p>
+                  <button class="buy_btn w3-button w3-black w3-round">Click to read more</button>
+                </div>
+              </article>
+
+              <!-- Paris -->
+              <article class="tour_card w3-col l4 m6 s12 w3-margin-bottom w3-card w3-hover-shadow w3-white">
+                <img src="img/bk0wwou3ljsb1.jpg" alt="Paris" class="w3-image">
+                <div class="tour_info w3-container">
+                  <h3>The breakthrough</h3>
+                  <p class="tour_date w3-text-grey">late 1990s-early 2000s</p>
+                  <p>Cartoon Network entered its first big creative boom</p>
+                  <button class="buy_btn w3-button w3-black w3-round">Click to read more</button>
+                </div>
+              </article>
+
+              <!-- San Francisco -->
+              <article class="tour_card w3-col l4 m6 s12 w3-margin-bottom w3-card w3-hover-shadow w3-white">
+                <img src="img/cnhbomax-1755876707736.webp" alt="San Francisco" class="w3-image">
+                <div class="tour_info w3-container">
+                  <h3>The prime</h3>
+                  <p class="tour_date w3-text-grey">2010s</p>
+                  <p>Cartoon Network Renaissance.</p>
+                  <button class="buy_btn w3-button w3-black w3-round">Click to read more</button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="contact" id="contact">
+          <div class="contact_section w3-container w3-light-grey w3-padding-64">
+            <h2 class="contact_title w3-text-black w3-wide">CONTACT</h2>
+            <p class="contact_subtitle w3-text-grey">Fan? Drop a note!</p>
+
+            <div class="contact_container w3-row-padding w3-margin-top">
+              <div class="contact_info w3-col l6 m6 s12">
+                <p><i class="fa fa-map-marker"></i> Chicago, US</p>
+                <p><i class="fa fa-phone"></i> Phone: +00 151515</p>
+                <p><i class="fa fa-envelope"></i> Email: info@cartoonnetwork.ca</p>
+              </div>
+
+              <form class="contact_form w3-col l6 m6 s12 w3-white w3-padding-16 w3-card-4">
+                <div class="row w3-row-padding">
+                    <input type="text" placeholder="Name" required class="w3-input w3-border">
+                    <input type="email" placeholder="Email" required class="w3-input w3-border">
+                </div>
+                <input type="text" class="message_input w3-input w3-border w3-margin-top" placeholder="Message" required>
+                <button type="submit" class="send_btn w3-button w3-black w3-round w3-margin-top">SEND</button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+    </main>
+
+    <!-- UNIVERSAL POPUP MODAL -->
+    <div id="popupModal" class="w3-modal">
+      <div class="w3-modal-content w3-animate-top w3-card-4">
+        <header class="w3-container w3-black">
+          <span onclick="closePopup()" class="w3-button w3-display-topright">&times;</span>
+          <h2 id="popupTitle"></h2>
+        </header>
+
+        <main class="w3-container w3-padding">
+          <img id="popupImage" src="" alt="" class="w3-image w3-margin-bottom">
+          <aside id="popupCaption" class="w3-text-grey"></aside>
+        </main>
+
+        <footer class="w3-container w3-black">
+          <button onclick="closePopup()" class="w3-button w3-right w3-margin-top">Close</button>
+        </footer>
+      </div>
+    </div>
+    
+    <!-- FULL-WIDTH IMAGE SECTION -->
+<section class="full_width_image">
+  <img src="img/cartoon-network.jpg.jpeg" alt="Banner Image">
+</section>
+
+    <!-- FOOTER -->
+    <footer class="footer w3-container w3-light-grey w3-padding-32 w3-center">
+    <div class="footer_icons">
+        <a href="https://facebook.com" target="_blank" class="w3-hover-opacity">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+
+        <a href="https://instagram.com" target="_blank" class="w3-hover-opacity">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://www.snapchat.com" target="_blank" class="w3-hover-opacity">
+            <i class="fa-brands fa-snapchat"></i>
+        </a>
+
+        <a href="https://www.pinterest.com" target="_blank" class="w3-hover-opacity">
+            <i class="fa-brands fa-pinterest"></i>
+        </a>
+
+        <a href="https://twitter.com" target="_blank" class="w3-hover-opacity">
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+        <a href="https://linkedin.com" target="_blank" class="w3-hover-opacity">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+    </div>
+
+    <p class="footer_text w3-text-grey w3-margin-top">
+        Powered by 
+        <a href="https://www.w3schools.com" target="_blank">w3.css</a>
+    </p>
+</footer>
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // OPEN THE POPUP
+      function openPopup(title, imageSrc, caption, showImage = true) {
+        document.getElementById('popupTitle').textContent = title;
+        const img = document.getElementById('popupImage');
+        const captionEl = document.getElementById('popupCaption');
+
+        if(showImage) {
+          img.src = imageSrc;
+          img.style.display = "block";
+        } else {
+          img.style.display = "none"; // hide image for contact popup
+        }
+
+        captionEl.textContent = caption;
+        document.getElementById('popupModal').style.display = 'flex';
+      }
+
+      // CLOSE POPUP
+      function closePopup() {
+        document.getElementById('popupModal').style.display = 'none';
+      }
+
+      // BAND SECTION
+      document.querySelectorAll('.band_item').forEach(item => {
+        item.addEventListener('click', () => {
+          const title = item.querySelector('h5').textContent;
+          const imgSrc = item.querySelector('img').src;
+          const caption = "This is " + title + ". One of Cartoon Network's popular shows.";
+          openPopup(title, imgSrc, caption, true);
+        });
+      });
+
+      // TOUR SECTION POPUP
+document.querySelectorAll('.tour_card .buy_btn').forEach(button => {
+  button.addEventListener('click', (event) => {
+
+    const card = event.target.closest('.tour_card');
+    const title = card.querySelector('h3').textContent;
+    const imageSrc = card.querySelector('img').src;
+
+    // You can customize this area: unique full descriptions
+    let fullText = "";
+
+    if (title === "The start") {
+      fullText =
+        "Cartoon Network was launched on October 1, 1992 by Turner Broadcasting after acquiring Hanna-Barbera’s vast cartoon library. In its early years, the channel mainly aired classic cartoons like The Flintstones, Scooby-Doo, and Tom and Jerry. It gradually began experimenting with original content through shows like Space Ghost Coast to Coast and the “What a Cartoon!” shorts program, which helped discover new creators.";
+    }
+
+    if (title === "The breakthrough") {
+      fullText =
+        "From the late 1990s to the early 2000s, Cartoon Network entered its first big creative boom. This era produced iconic original series such as Dexter’s Laboratory, Johnny Bravo, The Powerpuff Girls, Ed, Edd n Eddy, and Samurai Jack. The network became known for its experimental, creator-driven animation style. During this time, Adult Swim also launched as a late-night programming block, expanding the channel’s influence on older audiences";
+    }
+
+    if (title === "The prime") {
+      fullText =
+        "A second major wave of popularity began in the 2010s, often called the “Cartoon Network Renaissance.” Shows like Adventure Time, Regular Show, The Amazing World of Gumball, Steven Universe, and We Bare Bears drew worldwide audiences with their storytelling and humor. In recent years, Cartoon Network has continued producing new content while expanding onto streaming platforms and partnering with Warner Bros. Discovery, adapting to modern viewing habits.";
+    }
+
+    // Open the shared modal
+    openPopup(title, imageSrc, fullText, true);
+  });
+});
+
+
+      // CONTACT FORM
+      document.querySelector('.contact_form').addEventListener('submit', function(e){
+        e.preventDefault(); // prevent submission
+        openPopup("Thank You!", "", "Thank you for contacting us. We will get back to you soon.", false);
+        this.reset(); // clear the form
+      });
+      const menuToggle = document.querySelector(".menu_toggle");
+const navList = document.querySelector(".nav_list");
+
+menuToggle.addEventListener("click", () => {
+    navList.classList.toggle("active");
+});
+    </script>
+
+</body>
+</html>
+

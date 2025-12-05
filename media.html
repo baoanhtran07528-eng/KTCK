@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media - The Band</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- W3.CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="w3-light-grey">
+
+    <!-- HEADER -->
+    <header>
+    <div class="navbar_area">
+        <span class="menu_toggle"><i class="fa fa-bars"></i></span>
+        <ul class="nav_list">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#band">Introduction</a></li>
+            <li><a href="index.html#tour">History</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+
+            <li class="nav_more">
+                <a href="#">More <i class="fa fa-caret-down"></i></a>
+                <div class="nav_item">
+                    <a href="merchandise.html">Merchandise</a>
+                    <a href="extras.html">Extras</a>
+                    <a href="media.html">Media</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="header_search">
+        <i class="fa fa-search"></i>
+    </div>
+</header>
+
+    <!-- MAIN CONTENT -->
+    <main class="w3-container w3-padding-64">
+
+        <div class="heading w3-center w3-margin-bottom">
+            <h1 class="w3-text-black w3-wide">MEDIA</h1>
+            <p class="w3-text-grey">Watch our videos and see popular clips!</p>
+        </div>
+
+        <!-- MEDIA GRID -->
+        <div class="media_grid w3-row-padding w3-margin-top">
+
+            <!-- Media Item 1 -->
+            <div class="media_item w3-col l3 m6 s12 w3-card w3-hover-shadow w3-margin-bottom">
+                <img src="img/maxresdefault (1).jpg" alt="Live Performance" class="w3-image">
+                <div class="w3-container w3-center w3-padding">
+                    <h5>Teen Titan Go clip</h5>
+                    <button class="watch_btn w3-button w3-black w3-round" onclick="openPopup('video1')">Watch</button>
+                </div>
+            </div>
+
+            <!-- Media Item 2 -->
+            <div class="media_item w3-col l3 m6 s12 w3-card w3-hover-shadow w3-margin-bottom">
+                <img src="img/maxresdefault (2).jpg" alt="Studio Session" class="w3-image">
+                <div class="w3-container w3-center w3-padding">
+                    <h5>All the Best Cartoon Crossovers</h5>
+                    <button class="watch_btn w3-button w3-black w3-round" onclick="openPopup('video2')">Watch</button>
+                </div>
+            </div>
+
+            <!-- Media Item 3 -->
+            <div class="media_item w3-col l3 m6 s12 w3-card w3-hover-shadow w3-margin-bottom">
+                <img src="img/hqdefault.jpg" alt="Music Video" class="w3-image">
+                <div class="w3-container w3-center w3-padding">
+                    <h5>Original Music Video</h5>
+                    <button class="watch_btn w3-button w3-black w3-round" onclick="openPopup('video3')">Watch</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer w3-container w3-light-grey w3-padding-32 w3-center">
+    <div class="footer_icons">
+        <a href="https://facebook.com" target="_blank" class="w3-hover-opacity">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+
+        <a href="https://instagram.com" target="_blank" class="w3-hover-opacity">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://www.snapchat.com" target="_blank" class="w3-hover-opacity">
+            <i class="fa-brands fa-snapchat"></i>
+        </a>
+
+        <a href="https://www.pinterest.com" target="_blank" class="w3-hover-opacity">
+            <i class="fa-brands fa-pinterest"></i>
+        </a>
+
+        <a href="https://twitter.com" target="_blank" class="w3-hover-opacity">
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+        <a href="https://linkedin.com" target="_blank" class="w3-hover-opacity">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+    </div>
+
+    <p class="footer_text w3-text-grey w3-margin-top">
+        Powered by 
+        <a href="https://www.w3schools.com" target="_blank">w3.css</a>
+    </p>
+</footer>
+
+    <!-- VIDEO MODALS -->
+    <div id="video1" class="w3-modal">
+        <div class="w3-modal-content w3-animate-top w3-round-large">
+            <header class="w3-black w3-padding w3-center">
+                <h3>Teen Titan Go clip</h3>
+            </header>
+            <div class="w3-padding w3-center">
+                <iframe width="850" height="512" src="https://www.youtube.com/embed/HUJk4HMpViM" title="The Titans Can Rock (Mash-Up) | Teen Titans Go! | Cartoon Network" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <footer class="w3-padding w3-center">
+                <button class="w3-button w3-red w3-round" onclick="closePopup('video1')">Close</button>
+            </footer>
+        </div>
+    </div>
+    <div id="video2" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-round-large">
+        <header class="w3-black w3-padding w3-center">
+            <h3>All the Best Cartoon Crossovers</h3>
+        </header>
+        <div class="w3-padding w3-center">
+            <iframe width="850" height="512" src="https://www.youtube.com/embed/iVnWSv0iOnQ" allowfullscreen></iframe>
+        </div> <!-- FIXED: this was missing -->
+        <footer class="w3-padding w3-center">
+            <button class="w3-button w3-red w3-round" onclick="closePopup('video2')">Close</button>
+        </footer>
+    </div>
+</div>
+
+    <div id="video3" class="w3-modal">
+        <div class="w3-modal-content w3-animate-top w3-round-large">
+            <header class="w3-black w3-padding w3-center">
+                <h3>Original Music Video</h3>
+            </header>
+            <div class="w3-padding w3-center">
+                <iframe width="850" height="512" src="https://www.youtube.com/embed/7mSI_py6e5o" title="Original Music Video Pays Tribute to Cartoon Network&#39;s First 20 Years | Cartoon Network" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <footer class="w3-padding w3-center">
+                <button class="w3-button w3-red w3-round" onclick="closePopup('video3')">Close</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script>
+        function openPopup(id){
+            document.getElementById(id).style.display = 'block';
+        }
+
+        function closePopup(id){
+            document.getElementById(id).style.display = 'none';
+            // Stop video when modal closes
+            let iframe = document.querySelector('#' + id + ' iframe');
+            if(iframe){
+                iframe.src = iframe.src;
+            }
+        }
+
+        window.onclick = function(event){
+            let modals = document.querySelectorAll('.w3-modal');
+            modals.forEach(modal => {
+                if(event.target === modal){
+                    modal.style.display = "none";
+                    // Stop video
+                    let iframe = modal.querySelector('iframe');
+                    if(iframe){
+                        iframe.src = iframe.src;
+                    }
+                }
+            });
+        }
+        const menuToggle = document.querySelector(".menu_toggle");
+const navList = document.querySelector(".nav_list");
+
+menuToggle.addEventListener("click", () => {
+    navList.classList.toggle("active");
+});
+    </script>
+
+</body>
+</html>

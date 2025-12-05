@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extras - The Band</title>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- W3.CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* ==========================
+           POPUP MODAL FOR EXTRAS
+        ========================== */
+        .extras-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .extras-modal .w3-modal-content {
+            background-color: #fff;
+            margin: 80px auto;
+            padding: 0;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            animation-name: modalanim;
+            animation-duration: 0.3s;
+        }
+
+        @keyframes modalanim {
+            from {opacity:0; transform: translateY(-50px);}
+            to {opacity:1; transform: translateY(0);}
+        }
+
+        /* Popup header */
+        .extras-modal .popup-header {
+            background-color: #000;
+            color: #fff;
+            font-size: 1.2rem;
+            padding: 16px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .extras-modal .modal-body {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .extras-modal .modal-body img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        .extras-modal footer {
+            padding: 16px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .extras-modal .close-btn {
+            background-color: #ff4444;
+            color: #fff;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        .extras-modal .close-btn:hover {
+            transform: scale(1.05);
+            background-color: #ff0000;
+        }
+    </style>
+</head>
+<body class="w3-light-grey">
+
+    <!-- HEADER -->
+    <header>
+    <div class="navbar_area">
+        <span class="menu_toggle"><i class="fa fa-bars"></i></span>
+        <ul class="nav_list">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#band">Introduction</a></li>
+            <li><a href="index.html#tour">History</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+
+            <li class="nav_more">
+                <a href="#">More <i class="fa fa-caret-down"></i></a>
+                <div class="nav_item">
+                    <a href="merchandise.html">Merchandise</a>
+                    <a href="extras.html">Extras</a>
+                    <a href="media.html">Media</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="header_search">
+        <i class="fa fa-search"></i>
+    </div>
+</header>
+
+    <!-- MAIN CONTENT -->
+    <main class="w3-container w3-padding-64">
+
+        <div class="heading w3-center w3-margin-bottom">
+            <h1 class="w3-text-black w3-wide">EXTRAS</h1>
+            <p class="w3-text-grey">Special behind-the-scenes content!</p>
+        </div>
+
+        <!-- EXTRAS GRID -->
+        <div class="extras_grid w3-row-padding w3-margin-top">
+
+            <div class="extras_item w3-col l3 m6 s12 w3-card w3-hover-shadow w3-margin-bottom">
+                <img src="img/UJXgdC.jpg" alt="Wallpaper" class="w3-image">
+                <div class="w3-container w3-center w3-padding">
+                    <h5>Exclusive Wallpaper</h5>
+                    <button class="download_btn w3-button w3-black w3-round" onclick="openPopup('popup1')">Download</button>
+                </div>
+            </div>
+
+            <div class="extras_item w3-col l3 m6 s12 w3-card w3-hover-shadow w3-margin-bottom">
+                <img src="img/hq720.jpg" alt="Behind-the-scenes video" class="w3-image">
+                <div class="w3-container w3-center w3-padding">
+                    <h5>Interview with Rebecca Sugar</h5>
+                    <button class="watch_btn w3-button w3-black w3-round" onclick="openPopup('popup2')">Watch</button>
+                </div>
+            </div>
+
+            <div class="extras_item w3-col l3 m6 s12 w3-card w3-hover-shadow w3-margin-bottom">
+                <img src="img/maxresdefault.jpg" alt="Band Interview" class="w3-image">
+                <div class="w3-container w3-center w3-padding">
+                    <h5>Betty Cohen Interview</h5>
+                    <button class="watch_btn w3-button w3-black w3-round" onclick="openPopup('popup3')">Watch</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer w3-container w3-light-grey w3-padding-32 w3-center">
+    <div class="footer_icons">
+        <a href="https://facebook.com" target="_blank" class="w3-hover-opacity">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+
+        <a href="https://instagram.com" target="_blank" class="w3-hover-opacity">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://www.snapchat.com" target="_blank" class="w3-hover-opacity">
+            <i class="fa-brands fa-snapchat"></i>
+        </a>
+
+        <a href="https://www.pinterest.com" target="_blank" class="w3-hover-opacity">
+            <i class="fa-brands fa-pinterest"></i>
+        </a>
+
+        <a href="https://twitter.com" target="_blank" class="w3-hover-opacity">
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+        <a href="https://linkedin.com" target="_blank" class="w3-hover-opacity">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+    </div>
+
+    <p class="footer_text w3-text-grey w3-margin-top">
+        Powered by 
+        <a href="https://www.w3schools.com" target="_blank">w3.css</a>
+    </p>
+</footer>
+
+    <!-- =====================
+         POPUPS
+    ====================== -->
+    <div id="popup1" class="w3-modal extras-modal">
+        <div class="w3-modal-content">
+            <div class="popup-header">Exclusive Wallpaper</div>
+            <div class="modal-body">
+                <img src="img/UJXgdC.jpg" alt="Wallpaper">
+                <aside>High-resolution wallpaper for your desktop or mobile device.</aside>
+            </div>
+            <footer>
+                <button class="download_btn w3-button w3-black w3-round">Download</button>
+                <button class="close-btn" onclick="closePopup('popup1')">Close</button>
+            </footer>
+        </div>
+    </div>
+
+    <div id="popup2" class="w3-modal extras-modal">
+        <div class="w3-modal-content">
+            <div class="popup-header">Interview with Rebecca Sugar</div>
+            
+            <div class="modal-body">
+    <div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:10px;">
+        <iframe width="400" height="270" src="https://www.youtube.com/embed/74BxKXHgk1A" title="Create Your Own Cartoons! - Interview with Rebecca Sugar | Steven Universe | Cartoon Network" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <aside>Create Your Own Cartoons! - Interview with Rebecca Sugar | Steven Universe | Cartoon Network.</aside>
+</div>
+            <footer>
+                <button class="watch_btn w3-button w3-black w3-round">Watch</button>
+                <button class="close-btn" onclick="closePopup('popup2')">Close</button>
+            </footer>
+        </div>
+    </div>
+
+    <div id="popup3" class="w3-modal extras-modal">
+        <div class="w3-modal-content">
+            <div class="popup-header">Betty Cohen Interview</div>
+            <div class="modal-body">
+    <div class="video-wrapper" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:10px;">
+        <iframe width="400" height="270" src="https://www.youtube.com/embed/scdzY2pde-Q" title="Betty Cohen: Cartoon Networks First President!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <aside>Betty Cohen: Cartoon Networks First President!</aside>
+</div>
+
+            <footer>
+                <button class="watch_btn w3-button w3-black w3-round">Watch</button>
+                <button class="close-btn" onclick="closePopup('popup3')">Close</button>
+            </footer>
+        </div>
+    </div>
+    <!-- JS to open/close popups -->
+    <script>
+        function openPopup(id){
+            document.getElementById(id).style.display = 'block';
+        }
+        function closePopup(id){
+            document.getElementById(id).style.display = 'none';
+        }
+        // Close on click outside modal
+        window.onclick = function(event){
+            const modals = document.querySelectorAll('.extras-modal');
+            modals.forEach(modal => {
+                if(event.target == modal) modal.style.display = 'none';
+            });
+        }
+        const menuToggle = document.querySelector(".menu_toggle");
+const navList = document.querySelector(".nav_list");
+
+menuToggle.addEventListener("click", () => {
+    navList.classList.toggle("active");
+});
+    </script>
+
+</body>
+</html>

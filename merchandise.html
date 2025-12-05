@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merchandise - The Band</title>
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- W3.CSS -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="w3-light-grey">
+
+  <!-- HEADER -->
+  <header>
+    <div class="navbar_area">
+        <span class="menu_toggle"><i class="fa fa-bars"></i></span>
+        <ul class="nav_list">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#band">Introduction</a></li>
+            <li><a href="index.html#tour">History</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+
+            <li class="nav_more">
+                <a href="#">More <i class="fa fa-caret-down"></i></a>
+                <div class="nav_item">
+                    <a href="merchandise.html">Merchandise</a>
+                    <a href="extras.html">Extras</a>
+                    <a href="media.html">Media</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="header_search">
+        <i class="fa fa-search"></i>
+    </div>
+</header>
+
+  <!-- MAIN CONTENT -->
+  <main class="w3-container w3-padding-64">
+
+    <div class="heading w3-center w3-margin-bottom">
+      <h1 class="w3-text-black w3-wide">MERCHANDISE</h1>
+      <p class="w3-text-grey">Get your Cartoon Network goodies!</p>
+    </div>
+
+    <!-- MERCH GRID -->
+    <div class="merch_grid w3-row-padding w3-margin-top">
+
+      <div class="merch_item w3-card w3-hover-shadow w3-margin-bottom">
+        <img src="img/81RenMlyXLL._AC_UY1000_.jpg" alt="T-shirt" class="w3-image">
+        <div class="w3-container w3-center w3-padding">
+          <h5>Cartoon Network T-shirt</h5>
+          <p class="w3-text-grey">$25</p>
+          <button class="buy_btn" onclick="openProductModal('Band T-shirt', 25, 'img/81RenMlyXLL._AC_UY1000_.jpg')">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="merch_item w3-card w3-hover-shadow w3-margin-bottom">
+        <img src="img/12053945-1894652506884540.avif" alt="Hoodie" class="w3-image">
+        <div class="w3-container w3-center w3-padding">
+          <h5>Cartoon Network Hoodie</h5>
+          <p class="w3-text-grey">$45</p>
+          <button class="buy_btn" onclick="openProductModal('Band Hoodie', 45, 'img/12053945-1894652506884540.avif')">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="merch_item w3-card w3-hover-shadow w3-margin-bottom">
+        <img src="img/20279548_hi.jpg" alt="Cap" class="w3-image">
+        <div class="w3-container w3-center w3-padding">
+          <h5>Cartoon Network Backpack</h5>
+          <p class="w3-text-grey">$15</p>
+          <button class="buy_btn" onclick="openProductModal('Band Cap', 15, 'img/20279548_hi.jpg')">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="merch_item w3-card w3-hover-shadow w3-margin-bottom">
+        <img src="img/61h3B0ISDJL.jpg" alt="Poster" class="w3-image">
+        <div class="w3-container w3-center w3-padding">
+          <h5>Cartoon Network Tote Bag</h5>
+          <p class="w3-text-grey">$10</p>
+          <button class="buy_btn" onclick="openProductModal('Band Poster', 10, 'img/61h3B0ISDJL.jpg')">Add to Cart</button>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- PRODUCT MODAL -->
+  <div id="productModal" class="w3-modal">
+    <div class="w3-modal-content w3-card w3-animate-top" style="max-width:400px; text-align:center;">
+      <header class="w3-container w3-black w3-padding">
+        <span onclick="closeProductModal()" class="w3-button w3-display-topright">&times;</span>
+        <h3 id="modalProductName">Product Name</h3>
+      </header>
+      <div class="w3-container">
+        <img id="modalProductImg" src="" class="w3-image w3-margin-top" style="max-width:200px;">
+        <p id="modalProductPrice" class="w3-text-grey">$0</p>
+        <div class="w3-margin-top">
+          <label for="modalQuantity">Quantity:</label>
+          <input type="number" id="modalQuantity" class="w3-input w3-border w3-round" value="1" min="1" style="max-width:100px; margin:auto;">
+        </div>
+        <p class="w3-margin-top"><strong>Total: $<span id="modalTotalPrice">0</span></strong></p>
+      </div>
+      <footer class="w3-container w3-padding">
+        <button class="buy_btn w3-black" onclick="addToCartFromModal()">Add to Cart</button>
+        <button class="buy_btn w3-light-grey" onclick="closeProductModal()">Cancel</button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- CART MODAL -->
+  <div id="cartModal" class="w3-modal">
+    <div class="w3-modal-content w3-card w3-animate-top" style="max-width:500px;">
+      <header class="w3-container w3-black w3-padding">
+        <span onclick="closeCart()" class="w3-button w3-display-topright">&times;</span>
+        <h3>Your Cart</h3>
+      </header>
+      <div class="w3-container" id="cartContent">
+        <p>No items in cart.</p>
+      </div>
+      <footer class="w3-container w3-padding">
+        <p>Total: $<span id="cartTotalAmount">0</span></p>
+        <button class="buy_btn w3-black" onclick="checkoutCart()">Checkout</button>
+        <button class="buy_btn w3-light-grey" onclick="closeCart()">Continue Shopping</button>
+      </footer>
+    </div>
+  </div>
+<!-- SCAM MODAL -->
+<div id="scamModal">
+  <div class="modal-content">
+    <h1>Congratulations! You've been scammed!</h1>
+    <p>💸 Thanks for shopping with us! 💸</p>
+    <button class="close-btn" onclick="closeScamModal()">Close</button>
+  </div>
+</div>
+
+  <!-- FOOTER -->
+  <footer class="footer w3-container w3-light-grey w3-padding-32 w3-center">
+    <div class="footer_icons">
+        <a href="https://facebook.com" target="_blank" class="w3-hover-opacity">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+
+        <a href="https://instagram.com" target="_blank" class="w3-hover-opacity">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://www.snapchat.com" target="_blank" class="w3-hover-opacity">
+            <i class="fa-brands fa-snapchat"></i>
+        </a>
+
+        <a href="https://www.pinterest.com" target="_blank" class="w3-hover-opacity">
+            <i class="fa-brands fa-pinterest"></i>
+        </a>
+
+        <a href="https://twitter.com" target="_blank" class="w3-hover-opacity">
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+        <a href="https://linkedin.com" target="_blank" class="w3-hover-opacity">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+    </div>
+
+    <p class="footer_text w3-text-grey w3-margin-top">
+        Powered by 
+        <a href="https://www.w3schools.com" target="_blank">w3.css</a>
+    </p>
+</footer>
+
+  <!-- JS -->
+  <script>
+    let cart = [];
+    let currentProduct = {};
+
+    function openProductModal(name, price, img) {
+      currentProduct = { name, price, img, quantity: 1 };
+      document.getElementById("modalProductName").textContent = name;
+      document.getElementById("modalProductPrice").textContent = "$" + price.toFixed(2);
+      document.getElementById("modalProductImg").src = img;
+      document.getElementById("modalQuantity").value = 1;
+      document.getElementById("modalTotalPrice").textContent = price.toFixed(2);
+      document.getElementById("productModal").style.display = "block";
+    }
+
+    function closeProductModal() {
+      document.getElementById("productModal").style.display = "none";
+    }
+
+    document.getElementById("modalQuantity").addEventListener("input", function() {
+      let qty = parseInt(this.value);
+      if (isNaN(qty) || qty < 1) qty = 1;
+      this.value = qty;
+      currentProduct.quantity = qty;
+      document.getElementById("modalTotalPrice").textContent = (currentProduct.price * qty).toFixed(2);
+    });
+
+    function addToCartFromModal() {
+      // check if product already in cart
+      let existing = cart.find(item => item.name === currentProduct.name);
+      if(existing){
+        existing.quantity += currentProduct.quantity;
+      } else {
+        cart.push({...currentProduct});
+      }
+      closeProductModal();
+      openCart();
+    }
+
+    function openCart() {
+      const popup = document.getElementById("cartModal");
+      const content = document.getElementById("cartContent");
+      const totalElem = document.getElementById("cartTotalAmount");
+
+      if(cart.length === 0){
+        content.innerHTML = "<p>No items in cart.</p>";
+        totalElem.textContent = "0";
+      } else {
+        content.innerHTML = "";
+        let total = 0;
+        cart.forEach(item => {
+          const itemTotal = item.price * item.quantity;
+          content.innerHTML += `
+            <div class="w3-row w3-padding-small">
+              <div class="w3-col s6">${item.name} x ${item.quantity}</div>
+              <div class="w3-col s6 w3-right-align">$${itemTotal.toFixed(2)}</div>
+            </div>`;
+          total += itemTotal;
+        });
+        totalElem.textContent = total.toFixed(2);
+      }
+      popup.style.display = "block";
+    }
+
+    function closeCart() {
+      document.getElementById("cartModal").style.display = "none";
+    }
+
+    function checkoutCart() {
+      if(cart.length === 0) return;
+      alert("Congratulations! You got scammed 😎");
+      cart = [];
+      closeCart();
+      // reset cart total
+      document.getElementById("cartTotalAmount").textContent = "0";
+    }
+  </script>
+<script>
+    function checkoutCart() {
+  if(cart.length === 0) return;
+
+  // show scam modal instead of alert
+  openScamModal();
+
+  cart = [];
+  closeCart();
+  document.getElementById("cartTotalAmount").textContent = "0";
+}
+
+function openScamModal() {
+  document.getElementById("scamModal").style.display = "block";
+}
+
+function closeScamModal() {
+  document.getElementById("scamModal").style.display = "none";
+}
+const menuToggle = document.querySelector(".menu_toggle");
+const navList = document.querySelector(".nav_list");
+
+menuToggle.addEventListener("click", () => {
+    navList.classList.toggle("active");
+});
+</script>
+</body>
+</html>
